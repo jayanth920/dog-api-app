@@ -15,9 +15,6 @@ function App() {
 
   const [currrentView, setCurrentView] = useState()
 
-  const setView = view => {
-    setCurrentView(view)
-  }
   
   const getBreeds = () => {
     axios.get('https://dog.ceo/api/breeds/list/all')
@@ -32,7 +29,9 @@ function App() {
       .catch(err => alert('wrong breed'))
   }
 
-
+  const setView = view => {
+    setCurrentView(view)
+  }
   return (
     <div className="App">
       <Head setView={setView}/>

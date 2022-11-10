@@ -12,7 +12,7 @@ const BreedList = ({breeds, getBreeds}) => {
                     return (
                         <ul>
                             {props.map((breed) => {
-                                return <p><h1>{breed}</h1></p>
+                                return <p>{breed}</p>
                             }) }
                         </ul>
                     )
